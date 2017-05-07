@@ -1,0 +1,38 @@
+<ion-header>
+  <ion-navbar color="primary">
+    <ion-title>
+      <ion-icon name="heart" color="danger"></ion-icon>
+      Love Calculator
+      <ion-icon name="heart" color="danger"></ion-icon>
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <ion-list>
+
+    <ion-item>
+      <ion-label floating>Name 1</ion-label>
+      <ion-input type="text" [(ngModel)]="name1"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label floating>Name 2</ion-label>
+      <ion-input type="text" [(ngModel)]="name2"></ion-input>
+    </ion-item>
+
+  </ion-list>
+
+  <ion-card text-center>
+    <img src="assets/images/{{ image }}"/>
+    <ion-card-content>
+      <ion-card-title>
+        {{ name1 || "???" }} <ion-icon name="heart" color="danger"></ion-icon> {{ name2 || "???" }}
+        </ion-card-title>
+      <p class="score">
+        {{ score }}%
+      <p>
+    </ion-card-content>
+  </ion-card>
+
+</ion-content>
